@@ -6,7 +6,6 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
-    "start": "npx serve dist -s -l $PORT",
     "lint": "eslint .",
     "preview": "vite preview"
   },
