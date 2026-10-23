@@ -21,4 +21,4 @@ ENV NODE_ENV=production
 ENV PORT=3000
 EXPOSE 3000
 
-CMD ["sh", "-c", "pnpm exec prisma migrate deploy && node dist/index.js"]
+CMD ["sh", "-c", "pnpm exec prisma migrate deploy && pnpm exec tsx prisma/seed-if-empty.ts && node dist/index.js"]
