@@ -8,10 +8,10 @@ const config: ThemeConfig = {
 const theme = extendTheme({
   config,
   styles: {
-    global: (props) => ({
+    global: ({ colorMode }: { colorMode: string }) => ({
       body: {
-        bg: props.colorMode === "light" ? "gray.50" : "gray.900",
-        color: props.colorMode === "light" ? "gray.800" : "gray.100",
+        bg: colorMode === "light" ? "gray.50" : "gray.900",
+        color: colorMode === "light" ? "gray.800" : "gray.100",
       },
     }),
   },

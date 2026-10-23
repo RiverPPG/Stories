@@ -10,7 +10,7 @@ import adminRoutes from "./routes/admin.js";
 import seriesRoutes from "./routes/series.js";
 import listRoutes from "./routes/lists.js";
 
-const app = Fastify({ logger: true });
+const app = Fastify({ logger: true, trustProxy: true });
 
 await app.register(cors, { origin: true, credentials: true });
 await app.register(helmet, { contentSecurityPolicy: false });
